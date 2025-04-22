@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenBuild Network</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #2b2b2b;
+      color: #ffffff;
+    }
+    header {
+      background-color: #1b5e20;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .branding {
+      text-align: center;
+    }
+    .branding img {
+      display: block;
+      margin: 0 auto 8px auto;
+      width: 240px;
+      height: auto;
+      max-width: 90%;
+      filter: drop-shadow(0 0 6px #00000066);
+    }
+    nav {
+      background-color: #145017;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      display: block;
+    }
+    nav a:hover {
+      background-color: #2e7d32;
+    }
+    .hero {
+      background: url('img/hero-greenbuild2.png') center/cover no-repeat;
+      padding: 120px 20px;
+      text-align: center;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .hero button {
+      background-color: #ffffff;
+      color: #1b5e20;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #3a3a3a;
+      border-radius: 8px;
+    }
+    h2 {
+      color: #c8ffc8;
+    }
+    input, textarea, select, button {
+      width: 85%;
+      padding: 10px;
+      margin: 10px auto;
+      display: block;
+      border-radius: 5px;
+      border: 1px solid #888;
+      background-color: #555;
+      color: #fff;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #ccc;
+    }
+    button {
+      background-color: #1b5e20;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+    .listing {
+      border-bottom: 1px solid #666;
+      padding: 10px 0;
+    }
+    .testimonial {
+      background-color: #4a634f;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 40px;
+      font-style: italic;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .team-member img {
+      width: 180px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .listing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.listing-item {
+  background-color: #3a3a3a;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.listing-item img {
+  width: 60%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.listing-text {
+  padding: 15px;
+}
+
+.testimonial-box {
+  background-color: #f0f0f0;
+  color: #1e1e1e;
+  padding: 30px;
+  margin: 40px auto;
+  border-radius: 15px;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.testimonial-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.testimonial-box span {
+  font-weight: bold;
+  color: #444;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="branding">
+      <img src="img/Logo.png" alt="Logo">
+      <h1></h1>
+      <p><em>Too good to waste</em> – Regional. Nachhaltig. Preiswert.</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#hero">Startseite</a>
+    <a href="#buy">Kaufen</a>
+    <a href="#sell">Verkaufen</a>
+    <a href="#idea">Idee</a>
+    <a href="#about">Über uns</a>
+    <a href="#support">Support</a>
+    <a href="#footer">Impressum</a>
+  </nav>
+
+  <section id="hero" class="hero">
+    <h1>Nachhaltiges Bauen leicht gemacht</h1>
+    <p>Finde, tausche & verkaufe gebrauchte oder neue Restposten-Baumaterialien in ganz Österreich</p>
+    <a href="#buy"><button>Jetzt entdecken</button></a>
+  </section>
+
+  <div class="container" id="idea">
+    <h2>Unsere Idee</h2>
+    <p>
+      GreenBuild Network wurde mit dem Ziel gegründet, die Baubranche nachhaltiger zu gestalten. Wir möchten eine Plattform schaffen, die es Unternehmen und Privatpersonen ermöglicht, überschüssige oder nicht verwendete Baumaterialien unkompliziert weiterzugeben – sei es durch Verkauf, Tausch oder Verschenken. Denn zu viele wertvolle Ressourcen landen nach Bauprojekten ungenutzt im Müll.
+    </p>
+    <p>
+      Unser Fokus liegt dabei auf Materialien, die noch verwendbar sind – von Paletten ungenutzter Dämmplatten bis hin zu Aushubmaterial. Wir sind überzeugt, dass Restmaterialien nicht nur eine zweite Chance, sondern auch einen echten Mehrwert bieten können – wirtschaftlich und ökologisch. So fördern wir gemeinsam den verantwortungsvollen Umgang mit Ressourcen und bringen mehr Nachhaltigkeit auf die Baustelle.
+    </p>
+    <p>
+      Mit GreenBuild möchten wir einen Beitrag zur Kreislaufwirtschaft leisten und gleichzeitig Bauprojekte effizienter und kostengünstiger machen. Unsere Plattform verbindet Angebot und Nachfrage regional – einfach, transparent und umweltbewusst.
+    </p>
+  </div>
+
+  <div class="container" id="idee-stats">
+    <h3>Warum Wiederverwendung so wichtig ist</h3>
+
+    <div class="container" style="text-align: center;">
+        <h3>Fakten auf einen Blick</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li>🧱 <strong>10 Mio. Tonnen</strong> Bauabfall jährlich in Österreich</li>
+          <li>♻️ Nur <strong>35–40 %</strong> werden tatsächlich wiederverwendet</li>
+          <li>🌍 <strong>250 kg CO₂</strong> Einsparung je Tonne Ziegel</li>
+          <li>🏗️ <strong>Über 60 %</strong> des gesamten Abfalls kommt aus dem Baubereich</li>
+        </ul>
+      </div>
+    <p>
+      In Österreich fallen jährlich rund <strong>10 Millionen Tonnen Bau- und Abbruchabfälle</strong> an – das entspricht etwa <strong>60 % des gesamten Abfallaufkommens</strong>. Ein großer Teil davon ist noch nutzbar und landet dennoch auf Deponien oder im Recycling, obwohl eine direkte Wiederverwendung ressourcenschonender wäre.
+    </p>
+    <p>
+      Allein durch das Wiederverwenden von <strong>1 Tonne Ziegel</strong> können im Schnitt <strong>250 kg CO₂</strong> eingespart werden. Noch stärker ist der Effekt bei Dämmstoffen, Metallen und Holz.
+    </p>
+    <p>
+      Mit GreenBuild Network wollen wir zeigen, dass es einfach ist, Baumaterialien weiterzugeben statt wegzuwerfen – nachhaltig, regional und wirtschaftlich.
+    </p>
+    <p style="font-size: 0.85em; color: #aaa;">
+        Quelle: Umweltbundesamt, Statistik Austria, eigene Berechnungen
+      </p>
+    
+  </div>
+  
+  <div class="container" id="buy">
+    <h2>Suche nach Material</h2>
+    <input type="text" placeholder="Stichwort eingeben...">
+  </div>
+
+  <div class="container" id="sell">
+    <h2>Inserat erstellen</h2>
+    <form>
+      <input type="text" placeholder="Titel des Materials" required>
+      <input type="number" placeholder="Menge (z. B. Stück, m²)" required>
+      <input type="text" placeholder="Standort (z. B. Wien, Graz)" required>
+      <input type="number" placeholder="Preis in €" required>
+      <select required>
+        <option value="">Kategorie wählen</option>
+        <option value="holz">Holz</option>
+        <option value="ziegel">Ziegel</option>
+        <option value="metall">Metall</option>
+        <option value="dämmung">Dämmung</option>
+        <option value="aushub">Aushub</option>
+      </select>
+      <textarea placeholder="Beschreibung" rows="4" required></textarea>
+      <input type="file" accept="image/*">
+      <button type="submit">Inserat hochladen</button>
+    </form>
+  </div>
+  <div class="container" id="buy">
+    <h2>Beispiel-Inserate</h2>
+    <div class="listing-grid">
+      <div class="listing-item">
+        <img src="img/Gipskartonplatten.png" alt="Gipskartonplatten">
+        <div class="listing-text">
+          <h3>Gipskartonplatten</h3>
+          <p>15 Stück | Pöllauberg | €40</p>
+          <p><em>Restbestand aus der Renovierung</em></p>
+        </div>
+      </div>
+      <div class="listing-item">
+        <img src="img/Klinker.png" alt="Klinkersteine">
+        <div class="listing-text">
+          <h3>Klinkersteine (OVP)</h3>
+          <p>120 Stück | Schwoich | €80</p>
+          <p><em>Neue Palette übrig geblieben</em></p>
+        </div>
+      </div>
+      <div class="listing-item">
+        <img src="img/Aushubmaterial.png" alt="Aushubmaterial">
+        <div class="listing-text">
+          <h3>Aushubmaterial (Lehm-Sand)</h3>
+          <p>3m³ | Amstetten | kostenlos bei Abholung</p>
+          <p><em>Ideal für Aufschüttungen</em></p>
+        </div>
+      </div>
+      <div class="listing-item">
+        <img src="img/Bauholz.png" alt="Bauholz">
+        <div class="listing-text">
+          <h3>Bauholz</h3>
+          <p>50 lfm | Eggerding | €100</p>
+          <p><em>Überschuss aus Bauprojekt</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>Beispiel-Inserate</h2>
+    <div class="listing">
+      <strong>Gipskartonplatten</strong><br>
+      15 Stück | Eggerding | €40<br>
+      <em>Restbestand aus der Renovierung</em>
+    </div>
+    <div class="listing">
+      <strong>Klinkersteine (OVP)</strong><br>
+      120 Stück | Graz | €80<br>
+      <em>Neue Palette übrig geblieben</em>
+    </div>
+    <div class="listing">
+      <strong>Aushubmaterial (Lehm-Sand)</strong><br>
+      3m³ | Linz | kostenlos bei Abholung<br>
+      <em>Ideal für Aufschüttungen</em>
+    </div>
+  </div>
+
+  
+  <div class="container" id="about">
+    <h2>Über uns</h2>
+    <p>
+      Wir sind ein engagiertes Team von vier Studierenden der Technischen Universität Graz, das sich während unseres Bauingenieurstudiums kennengelernt hat. Während unseres Studiums haben wir bereits mehrere erfolgreiche Projekte umgesetzt, die unsere Leidenschaft für nachhaltiges Bauen und innovative Lösungen widerspiegeln. Unsere regelmäßigen Teambuilding-Events fanden sowohl im Zeichensaal als auch am KJ statt und förderten nicht nur den Zusammenhalt, sondern brachten auch frische Ideen und Perspektiven in unsere Arbeit ein.
+    </p>
+    <p>
+      Mit <strong>GreenBuild Network</strong> möchten wir unsere Vision von ressourcenschonendem Bauen realisieren und einen positiven Beitrag zur Kreislaufwirtschaft leisten.
+    </p>
+    
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="img/Raphael.png" alt="Raphael Pollak">
+        <p><strong>Raphael Pollak</strong><br>CEO – Geschäftsführung</p>
+      </div>
+      <div class="team-member">
+        <img src="img/Carina.png" alt="Carina Zott">
+        <p><strong>Carina Zott</strong><br>CCO – Marketing & Akquise</p>
+      </div>
+      <div class="team-member">
+        <img src="img/Daniel.png" alt="Daniel Schieder">
+        <p><strong>Daniel Schieder (Entrup) </strong><br>CTO – Technische Entwicklung</p>
+      </div>
+      <div class="team-member">
+        <img src="img/Simon.png" alt="Simon Friedl">
+        <p><strong>Simon Friedl</strong><br>CFO – Finanzen</p>
+      </div>
+    </div>
+
+</div>
+  <div class="container" id="support">
+    <h2>Support & Newsletter</h2>
+    <p>Du hast Fragen oder möchtest automatisch über neue Materialien informiert werden?</p>
+    <form>
+      <input type="email" placeholder="Deine E-Mail-Adresse" required>
+      <button type="submit">Newsletter abonnieren</button>
+    </form>
+  </div>
+
+  <div class="testimonial-box">
+    <img src="img/Tobias.png" alt="Tobias Glösl">
+    <p>
+      <strong>GreenBuild Network</strong> ist genau das, was die Bauwirtschaft gebraucht hat. Endlich eine Plattform, die Ressourcen sinnvoll wiederverwendet – und das mit System. Ich konnte hochwertiges Baumaterial günstig beziehen und gleichzeitig etwas für die Umwelt tun.
+    </p>
+    <span>– Tobias G.</span>
+  </div>
+</div>
+<footer id="footer" style="position: relative; text-align: center; background-color: #1b5e20; color: white; padding: 60px 20px 20px;">
+    <div style="text-align: right; margin-top: 0px;">
+      
+
+</div>
+
+  
+    <p>&copy; 2025 GreenBuild Network</p>
+    <p>App demnächst verfügbar im <a href="#">App Store</a> und <a href="#">Google Play Store</a></p>
+    <p><a href="#">Datenschutz</a> | <a href="#">AGB</a> | <a href="#">Kontakt</a></p>
+    <img src="img/phone1.png" alt="App Vorschau" style="width: 300px; max-width: 100%; height: auto; margin: 20px auto 40px auto; display: block;">
+
+  </footer>
+  
+
+</body>
+</html>
